@@ -1,0 +1,46 @@
+<div class="">
+
+<p class="container class-title">{{productTitle}}</p>
+
+<form action="" class="container form-input">
+    <label for="">filter by:</label>
+    <input type="text" class="">
+</form>
+
+
+<div>
+
+<table class="table">
+
+    <tr>
+
+        <th> <input type="button" class="btn-primary" value="show images">
+        </th>
+        <th>Product</th>
+        <th>Available</th>
+        <th>code</th>
+        <th>Price</th>
+        <th>5 Star Rarting</th>
+    </tr>
+        
+
+
+    <tr *ngFor='let prod of product'>
+        <td> </td>
+      <td>{{prod.name}}</td>
+      
+      <td>{{prod.available}}</td>
+      
+      <td>{{prod.code}}</td>
+      
+      <td>{{prod.price}}</td>
+      <td>{{prod.rating}}</td>
+    </tr>
+    
+
+</table>
+
+</div>
+
+
+</div>

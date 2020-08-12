@@ -1,3 +1,18 @@
+
+ @import "~bootstrap/dist/css/bootstrap.min.css";
+
 .nav-link {
   font-size: large;
 }
+
+button{
+  color: green;
+}
+
+.class-title{
+  text-align: left;
+  color: blanchedalmond;
+}
+
+
+

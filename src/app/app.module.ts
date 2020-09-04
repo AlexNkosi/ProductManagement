@@ -11,14 +11,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductListComponent } from './product-list/product-list.component';
 import { from } from 'rxjs';
 import { MaterialModule } from './material/Matartial';
-import {StarComponent} from './shared/star.component'
-import { ConvertToSpace } from './shared/convert-to-space.pipe'
+import {StarComponent} from './shared/star.component';
+import { ConvertToSpace } from './shared/convert-to-space.pipe';
+import {WelcomeComponent } from './home/welcome.component';
+import { ProductDetailsComponent } from './productDetails/product-details/product-details.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     StarComponent,
-    ConvertToSpace
+    ConvertToSpace,WelcomeComponent, ProductDetailsComponent
    
   ],
   imports: [

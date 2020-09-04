@@ -13,6 +13,7 @@ import {MatTableModule} from '@angular/material/table';
 
 import {MatTabsModule} from '@angular/material/tabs';
 
+
 const MaterialsComponets = [
   MatButtonModule,
   MatIconModule,

@@ -10,15 +10,7 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'P';
+  title = 'Product Management';
 
-  name = names;
-
-  
-
-
-  show () {
-    window.alert(this.name);
-  }
 
 }

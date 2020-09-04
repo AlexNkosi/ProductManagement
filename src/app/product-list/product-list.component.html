@@ -1,46 +1,62 @@
-<div class="">
-
-<p class="container class-title">{{productTitle}}</p>
-
-<form action="" class="container form-input">
-    <label for="">filter by:</label>
-    <input type="text" class="">
-</form>
 
 
-<div>
+<mat-card class="mat-Position">
+<p matCardTitle  class="class-title">{{productTitle}}</p>
 
+<div id="inputFilter"> 
+    <mat-form-field id="">
+    <label for="filter">filter by:</label>
+        <input matInput placeholder="" 
+        [(ngModel)]="listFilter" >
+       
+    </mat-form-field>
+    <p id="filter">Filtered by: {{listFilter}} </p>
+
+</div>
+
+
+
+    
 <table class="table">
 
-    <tr>
+    <thead>      <!-- <input type="button" class="btn btn-primary" value="Show imaages"> -->
+  
+        <th  >
 
-        <th> <input type="button" class="btn-primary" value="show images">
+            <mat-slide-toggle (click)="toogleImg()"  color= 'warm'> 
+                {{showImages ? 'hide': 'show' }} images
+            </mat-slide-toggle>
+
+        
+
         </th>
         <th>Product</th>
         <th>Available</th>
         <th>code</th>
         <th>Price</th>
         <th>5 Star Rarting</th>
-    </tr>
+    </thead>
+  
         
 
 
-    <tr *ngFor='let prod of product'>
-        <td> </td>
-      <td>{{prod.name}}</td>
+    <tr *ngFor='let prod of filteredProducts'>
+        <td> <img *ngIf='showImages'[src]='prod.imageUrl' [title]='prod.productName | uppercase'
+            width="150"
+            height="150"
+            > </td>
+      <td>{{prod.productName}}</td>
       
-      <td>{{prod.available}}</td>
+      <td>{{prod.releaseDate}}</td>
       
-      <td>{{prod.code}}</td>
+      <td>{{prod.productCode | lowercase |convertToSpace:'-' }}</td>
       
-      <td>{{prod.price}}</td>
-      <td>{{prod.rating}}</td>
+      <td>{{prod.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}}</td>
+      <!-- <td>{{prod.starRating}}</td> -->
+      <td><pm-star [rating] = 'prod.starRating'></pm-star></td>
+
     </tr>
     
 
 </table>
-
-</div>
-
-
-</div>
+</mat-card>

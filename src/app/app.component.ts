@@ -10,7 +10,7 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Home';
+  title = 'P';
 
   name = names;
 

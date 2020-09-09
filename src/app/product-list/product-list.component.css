@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,400;0,500;0,600;1,400;1,500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
+
 
 #filter  {
     
@@ -25,3 +28,30 @@ td {
     padding: 4em;
 }
 
+mat-card {
+
+    
+    -webkit-box-shadow: -32px 12px 112px -41px rgba(0,0,0,0.5);
+    -moz-box-shadow: -32px 12px 112px -41px rgba(0,0,0,0.5);
+    box-shadow: -32px 12px 112px -41px rgba(0,0,0,0.5);
+}
+
+table {
+    width: 100%;
+  }
+
+
+  th.mat-header-cell {
+    text-align: center;
+    background-color: #85929E;
+   
+   
+}
+.mat-table tbody{
+    background-color: #85929E;
+}
+.mat-table {
+    /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+}

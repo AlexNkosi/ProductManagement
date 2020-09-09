@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 // import { product } from './product';
 import { IProduct } from './product.interface';
 import {ProductService} from '../shared/product.service';
+import {MatDialog} from '@angular/material/dialog';
+import { ProductDetailsComponent } from '../productDetails/product-details/product-details.component';
 
 @Component({
   selector: 'pm-product-list',
@@ -15,9 +17,15 @@ export class ProductListComponent implements OnInit  {
 
  productTitle : string = "Products";
  showImages: boolean = true;
- private _filterBy: string; 
  filteredProducts:IProduct[]; 
  products: IProduct[] ;
+ displayedColumns:any[]=['Product','Available','Price','code','Rating'];
+
+
+ private _filterBy: string; 
+ private _list;
+ private _error;
+
  public get listFilter(): string {
 
   return this._filterBy;
@@ -30,12 +38,17 @@ export class ProductListComponent implements OnInit  {
     console.log('called');
   }
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private dialog:MatDialog) {
     this.listFilter = ''; 
+    }
+
     
-  }
- private _list;
- private _error;
+  
+    
+    
+
+
+
 ngOnInit(): void {
 
  
@@ -43,8 +56,10 @@ ngOnInit(): void {
     next: productsList => {
       this.products = productsList,
       
-    this.filteredProducts = this.products   ,
+    this.filteredProducts = this.products,
+
       console.log(productsList)
+      
     },
     error: err => this._error= err,
   })
@@ -63,6 +78,23 @@ ngOnInit(): void {
 
  }
 
+ openProductDetails(prodID:Number ):void {
+
+  this.dialog.open( ProductDetailsComponent,{
+    
+    width:'550px',
+    data:this.products.filter((prod:IProduct)=>
+    prod.productID  == prodID
+  )
+   });
+
+ 
+
+  console.log(this.products.filter((prod:IProduct)=>
+  prod.productID  == prodID
+),prodID)
+
+ }
 
 
 }

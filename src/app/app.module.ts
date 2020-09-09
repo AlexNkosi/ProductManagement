@@ -29,6 +29,8 @@ import { ProductDetailsComponent } from './productDetails/product-details/produc
     BrowserAnimationsModule,FormsModule,
     MaterialModule,HttpClientModule
 
+  ], entryComponents: [
+    ProductDetailsComponent
   ],
   bootstrap: [AppComponent]
 })

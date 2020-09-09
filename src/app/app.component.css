@@ -19,4 +19,9 @@ mat-tab-group{
   margin: 0 20em;
 }
 
+mat-tab{
+  -webkit-box-shadow: -32px 12px 112px -41px rgba(0,0,0,0.5);
+-moz-box-shadow: -32px 12px 112px -41px rgba(0,0,0,0.5);
+box-shadow: -32px 12px 112px -41px rgba(0,0,0,0.5);
+}
 

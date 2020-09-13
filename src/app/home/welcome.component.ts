@@ -52,7 +52,7 @@ paused = false;
 unpauseOnArrow = false;
 pauseOnIndicator = false;
 pauseOnHover = true;
-pauseOnFocus = true;
+PauseOnFocus = true;
 
 @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 

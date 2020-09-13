@@ -17,5 +17,17 @@ div.card {
 .table {
   margin-top: 10px
 }
+
+
+.imgBackground{
+  background-image: url('assets/backround-pictures/Mark.jpg');
+  background-color: #cccccc;
+  height: 500px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

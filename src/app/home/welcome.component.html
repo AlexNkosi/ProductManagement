@@ -1,24 +1,27 @@
-﻿<div class="card">
-  <div class="card-header">
-    {{pageTitle}}
-  </div>
-  <div class="card-body">
-    <div class="container-fluid">
-      <div class="text-center">
-        <img src="./assets/logo's/Trophy.png"
-             class="img-responsive center-block"
-             style="max-height:300px;padding-bottom:50px" />
-      </div>
-<!-- 
-      <div class="text-center">Developed by:</div>
-      <div class="text-center">
-        <h3>Alex Nkosi</h3>
-      </div>
+﻿
 
-      <div class="text-center">@recxtlc</div>
-      <div class="text-center">
-        <a href="http://www.bit.ly/DeborahKsBlog">www.bit.ly/DeborahKsBlog</a>
-      </div> -->
-    </div>
+
+<div class=" coursel-pos">
+ 
+  <div class="card-body">
+    
+
+    <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover"  (slide)="onSlide($event)">
+      <ng-template ngbSlide *ngFor="let product of products; index as i">
+        <div class="carousel-caption">
+          <h3 class="imgTitle">{{product.productName}}</h3>
+        </div>
+        <a href="" target="_blank" rel="nofollow noopener noreferrer">
+          <div class="picsum-img-wrapper">
+            <img width="400" height="250" [src]="product.imageUrl" alt="product.productName">
+          </div>
+        </a>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="buttons">
+    <button mat-icon-button  color="primary">Shop</button>
+   
   </div>
 </div>
+

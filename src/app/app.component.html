@@ -1,25 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1 class="container-flued bg-dark class-title">
-     {{title}}
-  </h1>
+  <mat-toolbar color='primary' class="navbar"> 
+
+    <a href="">Home</a>
+
+    
+    <div>
+
+        <a href="#" class="space-link class-links" [routerLink]="['/welcome']">Log in</a>
+        <a href="#" class="space-link class-links" [routerLink]="['/productlist']" >Shop</a>
+        <a href="#" class="space-link class-links">About</a>
+        <a href="#" class="space-link class-links">Contact</a>
+        <a href="#" class="space-link class-links"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <a href="#" class="space-link class-links"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </a>
+    
+    </div>
+
+</mat-toolbar>
+
+
+  <h1 class="logo-text">Gamers Land  </h1>
+
   
-  <mat-tab-group >
-
-    <mat-tab label="Home">
-
-      <app-welcome></app-welcome>
-
-    </mat-tab > 
-
-
-    <mat-tab label="Products">
-       <pm-product-list></pm-product-list>
-    </mat-tab>
-   
-
-  </mat-tab-group>
-
-
+<router-outlet></router-outlet>
   
 </div>

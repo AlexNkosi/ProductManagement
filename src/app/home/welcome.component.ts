@@ -3,6 +3,7 @@ import {IProduct} from '../product-list/product.interface';
 import {ProductService}  from '../shared/product.service';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
+import {Router} from '@angular/router';
 
 @Component({
   selector:'app-welcome',
@@ -14,25 +15,9 @@ export class WelcomeComponent implements OnInit {
   products :IProduct[];
   error: string ;
 
-  count:bigint;
 
 
-  /*
-  this.productService.getProductList().subscribe({
-    next: productsList => {
-      this.products = productsList,
-      
-    this.filteredProducts = this.products,
-
-      console.log(productsList)
-      
-    },
-    error: err => this._error= err,
-  })
-  
-  */
-
-constructor(private productsData: ProductService){
+constructor(private productsData: ProductService, private router :Router){
 
 }
 ngOnInit(): void {
@@ -52,7 +37,7 @@ paused = false;
 unpauseOnArrow = false;
 pauseOnIndicator = false;
 pauseOnHover = true;
-PauseOnFocus = true;
+pauseOnFocus = true;
 
 @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
@@ -74,6 +59,8 @@ onSlide(slideEvent: NgbSlideEvent) {
     this.togglePaused();
   }
 }
-
+activateShopRouterLink(): void {
+  this.router.navigate(['/productlist']);
+}
 
 }

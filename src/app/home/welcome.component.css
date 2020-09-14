@@ -7,20 +7,6 @@
 }
 
 
-
-.carousel-position {
-    position: absolute;
-    top: -100em;
-    left: 0;
-}
-
-
-.carousel-item{
-    height: 2em;
-    padding: auto auto;
-    width: 50%;
-    
-}
 .coursel-pos{
   width: 50%;
   height: 15em;
@@ -28,60 +14,27 @@
   position: relative;
   top: 15em;
 }
-/* .carousel-control-prev{
-    width: 100%;
-} */
-
-.carousel-item {
-
-    margin-top: 1em;
-    height: 10vh;
-    min-height: 30px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .carousel-caption {
-    /* bottom: 350px; */
-    /* top: 0; */
-  }
-  
-  .carousel-caption h5 {
-    color: #fff;
-    background:radial-gradient(#29323c , #485563);
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    /* margin-top: 10em; */
-    opacity: .5;
-    border-radius: 15px;
-    padding: .5em;
-    transition: opacity 530ms ease-out;
-  }
-
-  .carousel-item h5:hover{
-      opacity: 1;
-  }
-
-  .carousel-item a {
-      color: #fff;
-      text-decoration: underline;
-    
-  }
-  
-  .carousel-caption p {
-    color: #fff;
-    background-color: #485563;
-    width: 100%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
-    margin-top: 11em;
-  }
   
 
-  .imgTitle{
-    color: #485563;
-  }
+.imgTitle{
+  color: #485563;
+  font-size: 20px;
+  margin-bottom: 1.0em;
+}
+.class-product-img{
+
+padding: 2em;
+
+
+}
+.class-btn-shop{
+  width: 50%;
+  font-size: 1.5em;
+}
+
+.card {
+  width: 60%;
+  height: 60%;
+  /* background-image: linear-gradient(to left bottom, #e5e7e6, #dbe2df, #d1ddd8, #c7d8d2, #bcd3cc); */
+  background-image: radial-gradient(circle, #a3e1c2, #8bdfb7, #70dcac, #4ed9a1, #07d697);
+}

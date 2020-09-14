@@ -1,108 +1,285 @@
+<!-- <mat-card>
+ <p matCardTitle  class="class-title">{{productTitle}}</p>
+      
+ <div id="inputFilter"> 
+     <mat-form-field id="">
+     <label for="filter">filter by:</label>
+         <input matInput placeholder="" 
+         [(ngModel)]="listFilter" >
+        
+     </mat-form-field>
+     <p id="filter">Filtered by: {{listFilter}} </p>
+ 
+ </div>
+</mat-card> -->
 
 
-<mat-card class="mat-Position">
-<p matCardTitle  class="class-title">{{productTitle}}</p>
-
-<div id="inputFilter"> 
-    <mat-form-field id="">
-    <label for="filter">filter by:</label>
-        <input matInput placeholder="" 
-        [(ngModel)]="listFilter" >
-       
-    </mat-form-field>
-    <p id="filter">Filtered by: {{listFilter}} </p>
-
-</div>
 
 
-<!-- 
+<mat-tab-group mat-align-tabs="center" [(selectedIndex)] =linkIndex>
+
+<mat-tab [label] = "links[0]">
+
+  <mat-card class="mat-Position">
+     
+      
+      
+    <!-- ['Product','Available','Price','code','5 Star Rarting'] -->
+    <table mat-table [dataSource]="filteredProducts" class="mat-elevation-z8">
     
-<table class="table">
-
-   
-        <th  >
-
-            <mat-slide-toggle (click)="toogleImg()"  color= 'warm'> 
-                {{showImages ? 'hide': 'show' }} images
-            </mat-slide-toggle>
-
-        
-
-        </th>
-    <th>Product</th>
-    <th>Available</th>
-    <th>code</th>
-    <th>Price</th>
-    <th>5 Star Rarting</th>
-    </thead>
-  
-        
-
-
-    <tr *ngFor='let prod of filteredProducts'>
-        <td> <img *ngIf='showImages'[src]='prod.imageUrl' [title]='prod.productName | uppercase'
+       
+      
+        <!-- Product Column -->
+        <ng-container class="colums" matColumnDef="Product">
+          <th mat-header-cell *matHeaderCellDef> Product </th>
+          <td mat-cell *matCellDef="let element"> 
+            <img *ngIf='showImages'[src]='element.imageUrl'  (click)='openProductDetails(element.productID)' [title]='element.productName | uppercase'
             width="150"
             height="150"
-            > </td>
-      <td>{{prod.productName}}</td>
+          
+            >
+          </td>
+        </ng-container>
       
-      <td>{{prod.releaseDate}}</td>
+        <!-- Available Column -->
+        <ng-container  class="colums" matColumnDef="Available">
+          <th mat-header-cell *matHeaderCellDef> Available </th>
+          <td mat-cell *matCellDef="let element"> {{element.releaseDate}} </td>
+        </ng-container>
       
-      <td>{{prod.productCode | lowercase |convertToSpace:'-' }}</td>
+        <!-- code Column -->
+        <ng-container  class="colums" matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef> code </th>
+          <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
+        </ng-container>
       
-      <td>{{prod.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}}</td>
-      
-      <td><pm-star [rating] = 'prod.starRating'></pm-star></td>
-
-    </tr>
+        <!-- Price Column -->
+        <ng-container  class="colums" matColumnDef="Price">
+          <th mat-header-cell *matHeaderCellDef> Price  </th>| currency:'ZAR' 'symbol-narrow':'1-2.2'}} 
+          <td mat-cell *matCellDef="let element"> {{element.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}} </td>
+        </ng-container>
+         <!-- Rating Column -->
+        <ng-container  class="colums" matColumnDef="Rating">
+            <th mat-header-cell *matHeaderCellDef> 5 Star Rating </th>
+            <td mat-cell *matCellDef="let element"> <pm-star [rating]='element.starRating'></pm-star> </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+     
+      </table>
+    
+    
+    
+    </mat-card>
     
 
-</table> -->
 
-<!-- ['Product','Available','Price','code','5 Star Rarting'] -->
-<table mat-table [dataSource]="filteredProducts" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
-    <ng-container class="colums" matColumnDef="Product">
-      <th mat-header-cell *matHeaderCellDef> Product </th>
-      <td mat-cell *matCellDef="let element"> 
-        <img *ngIf='showImages'[src]='element.imageUrl'  (click)='openProductDetails(element.productID)' [title]='element.productName | uppercase'
-        width="150"
-        height="150"
+
+</mat-tab>
+
+
+
+
+<mat-tab [label] = "links[1]">
+
+  <mat-card class="mat-Position">
+     
       
-        >
-      </td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container  class="colums" matColumnDef="Available">
-      <th mat-header-cell *matHeaderCellDef> Available </th>
-      <td mat-cell *matCellDef="let element"> {{element.releaseDate}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container  class="colums" matColumnDef="code">
-      <th mat-header-cell *matHeaderCellDef> code </th>
-      <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container  class="colums" matColumnDef="Price">
-      <th mat-header-cell *matHeaderCellDef> Price  </th>| currency:'ZAR' 'symbol-narrow':'1-2.2'}} 
-      <td mat-cell *matCellDef="let element"> {{element.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}} </td>
-    </ng-container>
-    <ng-container  class="colums" matColumnDef="Rating">
-        <th mat-header-cell *matHeaderCellDef> 5 Star Rating </th>
-        <td mat-cell *matCellDef="let element"> <pm-star [rating]='element.starRating'></pm-star> </td>
-      </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
- 
-  </table>
+      
+    <!-- ['Product','Available','Price','code','5 Star Rarting'] -->
+    <table mat-table [dataSource]="filteredProducts" class="mat-elevation-z8">
+    
+       
+      
+        <!-- Product Column -->
+        <ng-container class="colums" matColumnDef="Product">
+          <th mat-header-cell *matHeaderCellDef> Product </th>
+          <td mat-cell *matCellDef="let element"> 
+            <img *ngIf='showImages'[src]='element.imageUrl'  (click)='openProductDetails(element.productID)' [title]='element.productName | uppercase'
+            width="150"
+            height="150"
+          
+            >
+          </td>
+        </ng-container>
+      
+        <!-- Available Column -->
+        <ng-container  class="colums" matColumnDef="Available">
+          <th mat-header-cell *matHeaderCellDef> Available </th>
+          <td mat-cell *matCellDef="let element"> {{element.releaseDate}} </td>
+        </ng-container>
+      
+        <!-- code Column -->
+        <ng-container  class="colums" matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef> code </th>
+          <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
+        </ng-container>
+      
+        <!-- Price Column -->
+        <ng-container  class="colums" matColumnDef="Price">
+          <th mat-header-cell *matHeaderCellDef> Price  </th>| currency:'ZAR' 'symbol-narrow':'1-2.2'}} 
+          <td mat-cell *matCellDef="let element"> {{element.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}} </td>
+        </ng-container>
+         <!-- Rating Column -->
+        <ng-container  class="colums" matColumnDef="Rating">
+            <th mat-header-cell *matHeaderCellDef> 5 Star Rating </th>
+            <td mat-cell *matCellDef="let element"> <pm-star [rating]='element.starRating'></pm-star> </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+     
+      </table>
+    
+    
+    
+    </mat-card>
+    
 
 
 
-</mat-card>
+
+</mat-tab>
+
+
+
+<mat-tab [label] = "links[2]">
+
+  <mat-card class="mat-Position">
+     
+      
+      
+    <!-- ['Product','Available','Price','code','5 Star Rarting'] -->
+    <table mat-table [dataSource]="filteredProducts" class="mat-elevation-z8">
+    
+       
+      
+        <!-- Product Column -->
+        <ng-container class="colums" matColumnDef="Product">
+          <th mat-header-cell *matHeaderCellDef> Product </th>
+          <td mat-cell *matCellDef="let element"> 
+            <img *ngIf='showImages'[src]='element.imageUrl'  (click)='openProductDetails(element.productID)' [title]='element.productName | uppercase'
+            width="150"
+            height="150"
+          
+            >
+          </td>
+        </ng-container>
+      
+        <!-- Available Column -->
+        <ng-container  class="colums" matColumnDef="Available">
+          <th mat-header-cell *matHeaderCellDef> Available </th>
+          <td mat-cell *matCellDef="let element"> {{element.releaseDate}} </td>
+        </ng-container>
+      
+        <!-- code Column -->
+        <ng-container  class="colums" matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef> code </th>
+          <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
+        </ng-container>
+      
+        <!-- Price Column -->
+        <ng-container  class="colums" matColumnDef="Price">
+          <th mat-header-cell *matHeaderCellDef> Price  </th>| currency:'ZAR' 'symbol-narrow':'1-2.2'}} 
+          <td mat-cell *matCellDef="let element"> {{element.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}} </td>
+        </ng-container>
+         <!-- Rating Column -->
+        <ng-container  class="colums" matColumnDef="Rating">
+            <th mat-header-cell *matHeaderCellDef> 5 Star Rating </th>
+            <td mat-cell *matCellDef="let element"> <pm-star [rating]='element.starRating'></pm-star> </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+     
+      </table>
+    
+    
+    
+    </mat-card>
+    
+
+
+
+
+</mat-tab>
+
+
+
+<mat-tab [label] = "links[3]">
+
+  <mat-card class="mat-Position">
+     
+      
+      
+    <!-- ['Product','Available','Price','code','5 Star Rarting'] -->
+    <table mat-table [dataSource]="filteredProducts" class="mat-elevation-z8">
+    
+       
+      
+        <!-- Product Column -->
+        <ng-container class="colums" matColumnDef="Product">
+          <th mat-header-cell *matHeaderCellDef> Product </th>
+          <td mat-cell *matCellDef="let element"> 
+            <img *ngIf='showImages'[src]='element.imageUrl'  (click)='openProductDetails(element.productID)' [title]='element.productName | uppercase'
+            width="150"
+            height="150"
+          
+            >
+          </td>
+        </ng-container>
+      
+        <!-- Available Column -->
+        <ng-container  class="colums" matColumnDef="Available">
+          <th mat-header-cell *matHeaderCellDef> Available </th>
+          <td mat-cell *matCellDef="let element"> {{element.releaseDate}} </td>
+        </ng-container>
+      
+        <!-- code Column -->
+        <ng-container  class="colums" matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef> code </th>
+          <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
+        </ng-container>
+      
+        <!-- Price Column -->
+        <ng-container  class="colums" matColumnDef="Price">
+          <th mat-header-cell *matHeaderCellDef> Price  </th>| currency:'ZAR' 'symbol-narrow':'1-2.2'}} 
+          <td mat-cell *matCellDef="let element"> {{element.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}} </td>
+        </ng-container>
+         <!-- Rating Column -->
+        <ng-container  class="colums" matColumnDef="Rating">
+            <th mat-header-cell *matHeaderCellDef> 5 Star Rating </th>
+            <td mat-cell *matCellDef="let element"> <pm-star [rating]='element.starRating'></pm-star> </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+     
+      </table>
+    
+    
+    
+    </mat-card>
+    
+
+
+
+
+</mat-tab>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mat-tab-group>

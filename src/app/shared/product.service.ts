@@ -9,9 +9,20 @@ import {Observable} from 'rxjs'
 export class ProductService {
 
   productUrl: string = 'api/products/products.json';
+
+ 
+  
+
+  
   constructor( private httpClient :HttpClient) { 
 
   }
+
+  
+  public set setProductUrl(category : string) {
+    this.productUrl = category;
+  }
+  
 
   getProductList(): Observable <IProduct[]>{
 

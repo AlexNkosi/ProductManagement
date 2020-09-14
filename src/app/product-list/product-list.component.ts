@@ -4,6 +4,7 @@ import { IProduct } from './product.interface';
 import {ProductService} from '../shared/product.service';
 import {MatDialog} from '@angular/material/dialog';
 import { ProductDetailsComponent } from '../productDetails/product-details/product-details.component';
+import { error } from 'console';
 
 @Component({
   selector: 'pm-product-list',
@@ -20,7 +21,22 @@ export class ProductListComponent implements OnInit  {
  filteredProducts:IProduct[]; 
  products: IProduct[] ;
  displayedColumns:any[]=['Product','Available','Price','code','Rating'];
+ links = ["All Platforms","XBOX", "Playstation", "PC"];
+ apiUrls:string[] = [ 'api/products/AllPlatformsProucts.json', 'api/products/XboxProducts.json','api/products/PlaystationProducts.json','api/products/PCProducts.json'];
 
+ activeLink = this.links[0];
+
+ _linkIndex = 0;
+
+ 
+ public set linkIndex(v : number) {
+   this._linkIndex = v;
+   
+   this.showTabProducts( this.apiUrls[this._linkIndex]);
+  console.log(this._linkIndex,this.apiUrls[this._linkIndex]);
+  
+ }
+ 
 
  private _filterBy: string; 
  private _list;
@@ -51,7 +67,7 @@ export class ProductListComponent implements OnInit  {
 
 ngOnInit(): void {
 
- 
+  this.productService.setProductUrl = this.apiUrls[this._linkIndex];
   this.productService.getProductList().subscribe({
     next: productsList => {
       this.products = productsList,
@@ -96,5 +112,21 @@ ngOnInit(): void {
 
  }
 
+ showTabProducts(prodCategoryUrl:string):void {
+
+  this.productService.setProductUrl = prodCategoryUrl;
+  this.productService.getProductList().subscribe({
+    next: productCatergoryList =>{ this.products =productCatergoryList, 
+      this.filteredProducts = this.products,
+
+      console.log(productCatergoryList)
+    },
+    error: err => this._error = err
+    
+
+  })
+
+
+ }
 
 }

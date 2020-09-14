@@ -13,6 +13,8 @@ import {MatTableModule} from '@angular/material/table';
 
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 
 const MaterialsComponets = [
@@ -21,7 +23,8 @@ const MaterialsComponets = [
   MatToolbarModule,
   MatTableModule,MatInputModule,MatCardModule,
   MatSlideToggleModule,
-  MatTabsModule,MatDialogModule
+  MatTabsModule,MatDialogModule,
+  MatBadgeModule
 ];
 
 

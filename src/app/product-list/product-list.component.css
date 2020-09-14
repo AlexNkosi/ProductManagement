@@ -51,7 +51,12 @@ table {
     background-color: #85929E;
 }
 .mat-table {
-    /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+    font-family: Roboto, "Helvetica Neue", sans-serif;
     font-family: 'Fira Sans', sans-serif;
     font-size: 15px;
+}
+
+
+.mat-tab-labels {
+    background-color:#85929E ;
 }

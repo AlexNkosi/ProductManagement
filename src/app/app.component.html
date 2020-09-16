@@ -2,12 +2,12 @@
 <div style="text-align:center">
   <mat-toolbar color='primary' class="navbar"> 
 
-    <a href="">Home</a>
+    <a href="" [routerLink]="['/welcome']" >Home</a>
 
     
     <div>
 
-        <a href="#" class="space-link class-links glyphicon glyphicon-log-in" [routerLink]="['/welcome']">Log in</a>
+        <a href="#" class="space-link class-links glyphicon glyphicon-log-in" [routerLink]="['/login']">Log in</a>
         <a href="#" class="space-link class-links" [routerLink]="['/productlist']" >Shop</a>
         <a href="#" class="space-link class-links">About</a>
         <a href="#" class="space-link class-links">Contact</a>

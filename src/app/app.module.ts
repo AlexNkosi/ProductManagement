@@ -16,25 +16,31 @@ import { ConvertToSpace } from './shared/convert-to-space.pipe';
 import {WelcomeComponent } from './home/welcome.component';
 import { ProductDetailsComponent } from './productDetails/product-details/product-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component'
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     StarComponent,
-    ConvertToSpace,WelcomeComponent, ProductDetailsComponent, PageNotFoundComponent
+    ConvertToSpace,WelcomeComponent, ProductDetailsComponent, PageNotFoundComponent, LoginComponent
    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,FormsModule,
     MaterialModule,HttpClientModule, NgbModule,ProductModule,
+    LoginModule,
     AppRoutingModule
 
   ], entryComponents: [
     ProductDetailsComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}}]
 })
 export class AppModule { }

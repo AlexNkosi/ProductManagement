@@ -1,0 +1,54 @@
+[
+
+    {
+        "productID": 1,
+        "productName": "Gaming LED Headphones",
+        "productCode": "GDN-0011",
+        "releaseDate": "March 19, 2019",
+        "description": "Gaming LED Headphones",
+        "price": 44.22,
+        "starRating": 3.2,
+        "imageUrl": "assets/slideImages/Gaming LED Headphones.png"
+      },
+      {
+        "productID": 2,
+        "productName": "LED_Lighted_Playstation",
+        "productCode": "GDN-0023",
+        "releaseDate": "March 18, 2019",
+        "description": "15 gallon capacity rolling garden cart",
+        "price": 32.99,
+        "starRating": 4.2,
+        "imageUrl": "assets/slideImages/LED_Lighted_Playstation.png"
+      },
+      {
+        "productID": 5,
+        "productName": "TeckNet Gaming Mouse",
+        "productCode": "TBX-0048",
+        "releaseDate": "May 21, 2019",
+        "description": "TeckNet Gaming Mouse",
+        "price": 8.9,
+        "starRating": 4.8,
+        "imageUrl": "assets/slideImages/TeckNet Gaming Mouse.png"
+      },
+      {
+        "productID": 8,
+        "productName": "PS4 Controller",
+        "productCode": "TBX-0022",
+        "releaseDate": "May 15, 2019",
+        "description": "PS4 Controller",
+        "price": 11.55,
+        "starRating": 3.7,
+        "imageUrl": "assets/slideImages/PS4 Controller.png"
+      },
+      {
+        "productID": 10,
+        "productName": "Xbox One S",
+        "productCode": "GMG-0042",
+        "releaseDate": "October 15, 2018",
+        "description": "Xbox One S",
+        "price": 35.95,
+        "starRating": 4.6,
+        "imageUrl": "assets/slideImages/Xbox One S.png"
+      }
+      
+   ]

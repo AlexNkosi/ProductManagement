@@ -2,53 +2,53 @@
 
     {
         "productID": 1,
-        "productName": "Pink PS4 Console",
-        "productCode": "GDN-0011",
+        "productName": "Sony_PlayStation_4",
+        "productCode": "SGP-0011",
         "releaseDate": "March 19, 2019",
-        "description": "Pink PS4 Joys.",
+        "description": "Sony_PlayStation_4_Slim_1TB_Gaming_Console_with_Controller_-_Black__ps4.",
         "price": 44.22,
         "starRating": 3.2,
-        "imageUrl": "assets/productImages/Glossy Pink PS4 Controller.jpg"
+        "imageUrl": "assets/Playstation/Sony_PlayStation_4.png"
       },
       {
         "productID": 2,
-        "productName": "VR ",
-        "productCode": "GDN-0023",
+        "productName": "Grand_Theft_Auto_V",
+        "productCode": "GMP-0023",
         "releaseDate": "March 18, 2019",
-        "description": "15 gallon capacity rolling garden cart",
+        "description": "Grand_Theft_Auto_V__Premium_Edition_-_PlayStation_4",
         "price": 32.99,
         "starRating": 4.2,
-        "imageUrl": "assets/productImages/VR Headset for Nintendo Switch, OIVO 3D VR (Virtual Reality) Glasses, Labo Goggles Headset for Nintendo Switch.png"
+        "imageUrl": "assets/Playstation/Grand_Theft_Auto_V.png"
       },
       {
         "productID": 5,
-        "productName": "Gaming Hadsets",
-        "productCode": "TBX-0048",
+        "productName": "Crash_Bandicoot",
+        "productCode": "GMP-0048",
         "releaseDate": "May 21, 2019",
-        "description": "Curved claw steel hammer",
+        "description": "Crash_Bandicoot_N._Sane_Trilogy__First_Screens",
         "price": 8.9,
         "starRating": 4.8,
-        "imageUrl": "assets/productImages/HOT SELLING New Hybrid Technology Stereo Gaming LED Headphones with Mic for PC Gamer.jpg"
+        "imageUrl": "assets/Playstation/Crash_Bandicoot.png"
       },
       {
         "productID": 8,
-        "productName": "Gaming Chair",
+        "productName": "LED_Lighted_Playstation",
         "productCode": "TBX-0022",
         "releaseDate": "May 15, 2019",
-        "description": "15-inch steel blade hand saw",
+        "description": "LED_Lighted_Playstation_Controller_Wall_Art_Video_Game_Art",
         "price": 11.55,
         "starRating": 3.7,
-        "imageUrl": "assets/productImages/GTRACING PC & Racing Game Chair _ Wayfair.jpg"
+        "imageUrl": "assets/Playstation/LED_Lighted_Playstation.png"
       },
       {
         "productID": 10,
-        "productName": "Gaming T-Shirt",
-        "productCode": "GMG-0042",
-        "releaseDate": "October 15, 2018",
-        "description": "Standard two-button video game controller",
+        "productName": "PS4 Controller",
+        "productCode": "GMP-0042",
+        "releaseDate": "October 15, 2019",
+        "description": "PS4 Controller",
         "price": 35.95,
         "starRating": 4.6,
-        "imageUrl": "assets/productImages/I Paused My Game To Be Here Shirt  Gamer Gift Video Game _ Etsy.jpg"
+        "imageUrl": "assets/Playstation/PS4 Controller.png"
       }
       
    ]

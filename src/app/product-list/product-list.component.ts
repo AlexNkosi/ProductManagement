@@ -4,7 +4,7 @@ import { IProduct } from './product.interface';
 import {ProductService} from '../shared/product.service';
 import {MatDialog} from '@angular/material/dialog';
 import { ProductDetailsComponent } from '../productDetails/product-details/product-details.component';
-import { error } from 'console';
+
 
 @Component({
   selector: 'pm-product-list',

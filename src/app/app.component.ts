@@ -10,7 +10,7 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Product Management';
+  title = 'Gamers Land ';
 
 
 }

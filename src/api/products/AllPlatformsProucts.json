@@ -2,53 +2,53 @@
 
     {
         "productID": 1,
-        "productName": "Pink PS4 Console",
-        "productCode": "GDN-0011",
+        "productName": "GamingMouse",
+        "productCode": "GMM-0011",
         "releaseDate": "March 19, 2019",
-        "description": "Gaming Mouse.",
+        "description": "Gaming Mouse Astro Design .",
         "price": 44.22,
         "starRating": 3.2,
-        "imageUrl": "assets/productImages/GamingMouse.jpg"
+        "imageUrl": "assets/all platforms/GamingMouse.png"
       },
       {
         "productID": 2,
-        "productName": "VR ",
-        "productCode": "GDN-0023",
+        "productName": "Gaming Headset ",
+        "productCode": "HDS-0023",
         "releaseDate": "March 18, 2019",
-        "description": "Gaming Microphone",
+        "description": "Xbox One, PS4, PC Gaming Headset with Noise Cancelling Mic, Soft Memory Earmuffs Detachable Microphone Volume Control ",
         "price": 32.99,
         "starRating": 4.2,
-        "imageUrl": "assets/productImages/GamingMIC.png"
+        "imageUrl": "assets/all platforms/Gaming headset.png"
       },
       {
         "productID": 5,
-        "productName": "Gaming Hadsets",
-        "productCode": "TBX-0048",
+        "productName": "PC Racing Game Chair  ",
+        "productCode": "CGP-0048",
         "releaseDate": "May 21, 2019",
-        "description": "Curved claw steel hammer",
+        "description": "GTRACING PC Racing Game Chair  Wayfair",
         "price": 8.9,
         "starRating": 4.8,
-        "imageUrl": "assets/productImages/pillow.jpg"
+        "imageUrl": "assets/all platforms/PC Racing Game Chair.png"
       },
       {
         "productID": 8,
-        "productName": "Gaming Chair",
-        "productCode": "TBX-0022",
+        "productName": "Gaming LED Headphones",
+        "productCode": "GMP-0022",
         "releaseDate": "May 15, 2019",
-        "description": "15-inch steel blade hand saw",
+        "description": "HOT SELLING New Hybrid Technolog Stereo Gaming LED Headphones with Mic for PC Gamer",
         "price": 11.55,
         "starRating": 3.7,
-        "imageUrl": "assets/productImages/1.png"
+        "imageUrl": "assets/all platforms/Gaming LED Headphones.png"
       },
       {
         "productID": 10,
-        "productName": "Gaming T-Shirt",
-        "productCode": "GMG-0042",
-        "releaseDate": "October 15, 2018",
-        "description": "Standard two-button video game controller",
+        "productName": "GamingMIC",
+        "productCode": "GMI-0042",
+        "releaseDate": "October 15, 2019",
+        "description": "Pro Clear sound Microphone with background noise filter",
         "price": 35.95,
         "starRating": 4.6,
-        "imageUrl": "assets/productImages/Gamer Heartbeat Shirt.jpg"
+        "imageUrl": "assets/all platforms/GamingMIC.png"
       }
       
    ]

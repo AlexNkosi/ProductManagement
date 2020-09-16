@@ -21,7 +21,7 @@ constructor(private productsData: ProductService, private router :Router){
 
 }
 ngOnInit(): void {
-
+  this.productsData.setProductUrl = "api/products/slideImages.json"
   this.productsData.getProductList().subscribe({
     next: productObj => {
       this.products = productObj, 

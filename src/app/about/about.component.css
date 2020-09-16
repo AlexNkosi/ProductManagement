@@ -1,0 +1,15 @@
+.class-about-background-image{
+    width: 1000px;
+    background: url("../../assets/backround-pictures/Tyu.jpg");
+}
+
+
+.imgBackground {
+    background-image: url('../../assets/backround-pictures/Tyu.jpg') !important;
+    background-color: #cccccc;
+    height: 500px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

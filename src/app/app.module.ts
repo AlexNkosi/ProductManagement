@@ -20,20 +20,24 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component'
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { LoginModule } from './login/login.module';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import {AboutModule} from './about/about.module';
 
+import {ContactModule} from './contact/contact.module';
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     StarComponent,
-    ConvertToSpace,WelcomeComponent, ProductDetailsComponent, PageNotFoundComponent, LoginComponent
+    ConvertToSpace,WelcomeComponent, ProductDetailsComponent, PageNotFoundComponent, LoginComponent, AboutComponent, ContactComponent
    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,FormsModule,
     MaterialModule,HttpClientModule, NgbModule,ProductModule,
-    LoginModule,
+    LoginModule,ContactModule,AboutModule,
     AppRoutingModule
 
   ], entryComponents: [

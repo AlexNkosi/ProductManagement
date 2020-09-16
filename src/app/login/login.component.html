@@ -1,34 +1,40 @@
-<div class="card class-card-form">
-     <mat-card>
-         <mat-card-title>Login</mat-card-title>
-   
+
+<div class="card-position">
+    <div class="card class-card-form">
+        <mat-card>
+            <mat-card-title>Login</mat-card-title>
       
-     
-         <form action="">
-         <mat-card-content>
-
-         <mat-form-field class="class-form-input">
-             <mat-label>
-                 Email
-             </mat-label>
-            <input matInput type="text" placeholder="pat@gmail.com">
-
-           
-           
-         </mat-form-field >
          
-         <mat-form-field  class="class-form-input">
-            <mat-label>
-                Password
-            </mat-label>
-           <input matInput type="passwords" placeholder="">
-
-          
-          
-        </mat-form-field>
         
-         </mat-card-content>
+            <form action="">
+            <mat-card-content>
+   
+            <mat-form-field class="class-form-input">
+                <mat-label>
+                    Email
+                </mat-label>
+               <input matInput type="text" placeholder="pat@gmail.com">
+   
+              
+              
+            </mat-form-field >
+            
+            <mat-form-field  class="class-form-input">
+               <mat-label>
+                   Password
+               </mat-label>
+              <input matInput type="password" placeholder="">
+   
+             
+             
+           </mat-form-field>
+           
+           <button mat-raised-button (click)='showShopingList()'> Log In</button>
+   
+            </mat-card-content>
+   
+           </form>
+       </mat-card>
+   </div>
 
-        </form>
-    </mat-card>
 </div>

@@ -65,7 +65,7 @@ color: white;
 
 }
 .card {
-  width: 600px;
+  width: 800px;
   height: 500px;
   background-image: linear-gradient(to left bottom, #e5e7e6, #dbe2df, #d1ddd8, #c7d8d2, #bcd3cc);
   /* background-image: radial-gradient(circle, #a3e1c2, #8bdfb7, #70dcac, #4ed9a1, #07d697); */
@@ -86,7 +86,7 @@ color: white;
   }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 750px){
   .class-btn-shop{
     width: 30%;
     text-align: center;

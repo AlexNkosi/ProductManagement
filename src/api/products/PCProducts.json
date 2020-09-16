@@ -6,7 +6,7 @@
         "productCode": "LKP-0011",
         "releaseDate": "March 19, 2019",
         "description": "Logitech TK820 Keyboard With Touchpad",
-        "price": 44.22,
+        "price": 560.99,
         "starRating": 3.2,
         "imageUrl": "assets/PC/Logitech_Keyboard.png"
       },
@@ -16,7 +16,7 @@
         "productCode": "ACM-0023",
         "releaseDate": "March 18, 2019",
         "description": "Acer_Predator_X35_is_a_200Hz_curved_monitor_with_G-Sync_and_HDR_Ultra",
-        "price": 32.99,
+        "price": 15000.99,
         "starRating": 4.2,
         "imageUrl": "assets/PC/Acer_Predator_Monitor.png"
       },
@@ -26,7 +26,7 @@
         "productCode": "TBX-0048",
         "releaseDate": "May 21, 2019",
         "description": "Dell_and_Alienware_expand_PC_gaming_ecosystem_with_new_hardware_and_designs",
-        "price": 8.9,
+        "price": 19999.99,
         "starRating": 4.8,
         "imageUrl": "assets/PC/Dell_and_Alienware.png"
       },
@@ -36,7 +36,7 @@
         "productCode": "GCP-0022",
         "releaseDate": "May 15, 2019",
         "description": "Gaming_Computer__Gaming_Laptop_and_Gaming_Rig_Setup",
-        "price": 11.55,
+        "price": 14999.99,
         "starRating": 3.7,
         "imageUrl": "assets/PC/Gaming_Computer.png"
       },
@@ -47,7 +47,7 @@
         "productCode": "GMK-0042",
         "releaseDate": "October 15, 2019",
         "description": "Water resistant Keyboard you Can Spill All Your Drinks on This Gaming Keyboard ",
-        "price": 35.95,
+        "price": 550.95,
         "starRating": 4.9,
         "imageUrl": "assets/PC/Gaming_Keyboard.png"
       }

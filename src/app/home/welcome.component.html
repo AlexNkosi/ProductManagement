@@ -1,27 +1,35 @@
-﻿
+﻿<div class="card coursel-pos">
 
-
-<div class="card coursel-pos">
- 
   <div class="card-body">
-    
 
-    <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover"   (slide)="onSlide($event)">
-      <ng-template ngbSlide *ngFor="let product of products; index as i">
+
+    <ngb-carousel #carousel
+                  [interval]="2000"
+                  [pauseOnHover]="pauseOnHover"
+                  (slide)="onSlide($event)">
+      <ng-template ngbSlide
+                   *ngFor="let product of products; index as i">
         <div class="carousel-caption">
           <h3 class="imgTitle">{{product.productName}}</h3>
         </div>
-        <a href="" target="_blank" rel="nofollow noopener noreferrer">
+        <a href=""
+           target="_blank"
+           rel="nofollow noopener noreferrer">
           <div class="picsum-img-wrapper">
-            <img class="class-product-img" [src]="product.imageUrl" alt="product.productName">
+            <img class="class-product-img"
+                 [src]="product.imageUrl"
+                 alt="product.productName">
           </div>
         </a>
       </ng-template>
     </ngb-carousel>
   </div>
   <div>
-    <button class="class-btn-shop" mat-raised-button color="primary" (click)="activateShopRouterLink()"> <i class="fa fa-shopping-bag" aria-hidden="true"></i><span>SHOP NOW</span></button>
-   
+    <button class="class-btn-shop"
+            mat-raised-button
+            color="primary"
+            (click)="activateShopRouterLink()"> <i class="fa fa-shopping-bag"
+         aria-hidden="true"></i><span>SHOP NOW</span></button>
+
   </div>
 </div>
-

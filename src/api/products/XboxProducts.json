@@ -6,7 +6,7 @@
         "productCode": "GDN-0011",
         "releaseDate": "March 19, 2019",
         "description": "Xbox One S 500GB Game Console",
-        "price": 44.22,
+        "price": 5999.99,
         "starRating": 3.2,
         "imageUrl": "assets/xbox/Xbox One S.png"
       },
@@ -16,7 +16,7 @@
         "productCode": "GDN-0023",
         "releaseDate": "March 18, 2019",
         "description": "Artistic Xbox 360 ",
-        "price": 32.99,
+        "price": 3499.99,
         "starRating": 4.2,
         "imageUrl": "assets/xbox/xbox 360.png"
       },
@@ -26,7 +26,7 @@
         "productCode": "TBX-0048",
         "releaseDate": "May 21, 2019",
         "description": "Venom Twin Docking Station for Xbox One White",
-        "price": 8.9,
+        "price": 549.99,
         "starRating": 4.8,
         "imageUrl": "assets/xbox/Venom Twin.png"
       },
@@ -36,7 +36,7 @@
         "productCode": "GMC-0022",
         "releaseDate": "May 15, 2019",
         "description": "Wireless Xbox One Controller - Black",
-        "price": 11.55,
+        "price": 599.99,
         "starRating": 3.7,
         "imageUrl": "assets/xbox/Xbox One Controller.png"
       },
@@ -46,7 +46,7 @@
         "productCode": "GMP-0042",
         "releaseDate": "October 15, 2019",
         "description": "Shell Kit Polished White Gold For Xbox One Model 1537 Controllers",
-        "price": 35.95,
+        "price": 699.95,
         "starRating": 4.6,
         "imageUrl": "assets/xbox/Xbox One Model Controllers.png"
       }

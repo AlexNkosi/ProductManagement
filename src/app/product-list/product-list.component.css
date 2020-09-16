@@ -59,4 +59,9 @@ table {
 
 .mat-tab-labels {
     background-color:#85929E ;
+
+    width: 50%;
+}
+.price{
+    font-size: 1.5em;
 }

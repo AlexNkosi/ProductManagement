@@ -1,4 +1,4 @@
-<mat-card  *ngFor = ' let product of products'>
+<mat-card *ngFor=' let product of products'>
 
     <mat-card-header>
 
@@ -8,18 +8,18 @@
         </mat-card-title>
 
         <mat-card-subtitle>
-            Rating<pm-star [rating] = 'product.starRating'> </pm-star>
-            
+           
         </mat-card-subtitle>
-        
 
-        
+
+
     </mat-card-header>
 
-    <img [src]='product.imageUrl' [title]='product.productName' [alt]="product.productName"
-        width="250"
-        height="250"
-    >
+    <img [src]='product.imageUrl'
+         [title]='product.productName'
+         [alt]="product.productName"
+         width="250"
+         height="250">
     <mat-card-content>
 
         <p>
@@ -28,18 +28,18 @@
 
         </p>
 
+        <span> Rating<pm-star [rating]='product.starRating'> </pm-star>
+        </span>
+        <span class="price">{{product.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}}</span>
     </mat-card-content>
 
     <mat-dialog-actions>
-        <button mat-button mat-dialog-close>Cancel</button>
-        <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
-        <button mat-button >Add to Cart</button>
+        <button mat-button
+                mat-dialog-close>Cancel</button>
+        
+        <button mat-button>Add to Cart</button>
 
     </mat-dialog-actions>
 
 
 </mat-card>
-
-
-
-

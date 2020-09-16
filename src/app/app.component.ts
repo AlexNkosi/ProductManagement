@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import {names} from './name';
 
 import { from } from 'rxjs';
 

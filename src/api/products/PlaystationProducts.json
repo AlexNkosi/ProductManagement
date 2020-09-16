@@ -6,7 +6,7 @@
         "productCode": "SGP-0011",
         "releaseDate": "March 19, 2019",
         "description": "Sony_PlayStation_4_Slim_1TB_Gaming_Console_with_Controller_-_Black__ps4.",
-        "price": 44.22,
+        "price": 4999.99,
         "starRating": 3.2,
         "imageUrl": "assets/Playstation/Sony_PlayStation_4.png"
       },
@@ -16,7 +16,7 @@
         "productCode": "GMP-0023",
         "releaseDate": "March 18, 2019",
         "description": "Grand_Theft_Auto_V__Premium_Edition_-_PlayStation_4",
-        "price": 32.99,
+        "price": 799.99,
         "starRating": 4.2,
         "imageUrl": "assets/Playstation/Grand_Theft_Auto_V.png"
       },
@@ -26,7 +26,7 @@
         "productCode": "GMP-0048",
         "releaseDate": "May 21, 2019",
         "description": "Crash_Bandicoot_N._Sane_Trilogy__First_Screens",
-        "price": 8.9,
+        "price": 699.99,
         "starRating": 4.8,
         "imageUrl": "assets/Playstation/Crash_Bandicoot.png"
       },
@@ -36,7 +36,7 @@
         "productCode": "TBX-0022",
         "releaseDate": "May 15, 2019",
         "description": "LED_Lighted_Playstation_Controller_Wall_Art_Video_Game_Art",
-        "price": 11.55,
+        "price": 799.99,
         "starRating": 3.7,
         "imageUrl": "assets/Playstation/LED_Lighted_Playstation.png"
       },
@@ -46,7 +46,7 @@
         "productCode": "GMP-0042",
         "releaseDate": "October 15, 2019",
         "description": "PS4 Controller",
-        "price": 35.95,
+        "price": 899.95,
         "starRating": 4.6,
         "imageUrl": "assets/Playstation/PS4 Controller.png"
       }

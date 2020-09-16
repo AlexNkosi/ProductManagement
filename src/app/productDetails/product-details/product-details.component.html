@@ -2,7 +2,7 @@
 
     <mat-card-header>
 
-        <mat-card-title>
+        <mat-card-title class="product-title">
 
             {{product.productName}}
         </mat-card-title>
@@ -28,7 +28,7 @@
 
         </p>
 
-        <span> Rating<pm-star [rating]='product.starRating'> </pm-star>
+        <span > Rating<pm-star [rating]='product.starRating' class="product-rating"> </pm-star>
         </span>
         <span class="price">{{product.price |currency:'ZAR': 'symbol-narrow':'1.2-2'}}</span>
     </mat-card-content>

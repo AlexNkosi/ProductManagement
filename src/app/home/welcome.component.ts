@@ -2,6 +2,8 @@ import { Component,OnInit,ViewChild } from '@angular/core';
 import {IProduct} from '../product-list/product.interface';
 import {ProductService}  from '../shared/product.service';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import {LoginService} from '../shared/login.service';
+
 
 import {Router} from '@angular/router';
 
@@ -17,7 +19,7 @@ export class WelcomeComponent implements OnInit {
 
 
 
-constructor(private productsData: ProductService, private router :Router){
+constructor(private productsData: ProductService, private router :Router,private logins:LoginService){
 
 }
 ngOnInit(): void {
@@ -60,7 +62,12 @@ onSlide(slideEvent: NgbSlideEvent) {
   }
 }
 activateShopRouterLink(): void {
+  if(this.logins.isLoggedIn){
   this.router.navigate(['/productlist']);
+}
+  else{
+    this.router.navigate(['/login']);
+  }
 }
 
 }

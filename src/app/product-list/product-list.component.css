@@ -44,11 +44,14 @@ table {
   th.mat-header-cell {
     text-align: center;
     background-color: #85929E;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
    
 }
 .mat-table tbody{
     background-color: #85929E;
+    margin: 0 5em ;
 }
 .mat-table {
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -66,4 +69,8 @@ table {
 .product-rating{
     color: #FFA726;
     transition: ease-in;
+}
+
+td:last-child{
+    margin-left: 3em;
 }

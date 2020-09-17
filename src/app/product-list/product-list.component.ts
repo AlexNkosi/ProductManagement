@@ -82,7 +82,7 @@ ngOnInit(): void {
 
 }
 
- toogleImg(): void{
+ toggleImage(): void{
    this.showImages = !this.showImages;
  }
 

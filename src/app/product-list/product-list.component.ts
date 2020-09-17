@@ -4,6 +4,7 @@ import { IProduct } from './product.interface';
 import {ProductService} from '../shared/product.service';
 import {MatDialog} from '@angular/material/dialog';
 import { ProductDetailsComponent } from '../productDetails/product-details/product-details.component';
+import {LoginService} from '../shared/login.service';
 
 
 @Component({
@@ -54,7 +55,7 @@ export class ProductListComponent implements OnInit  {
     console.log('called');
   }
 
-  constructor(private productService: ProductService, private dialog:MatDialog) {
+  constructor(private productService: ProductService, private dialog:MatDialog, private logins:LoginService) {
     this.listFilter = ''; 
     }
 
@@ -79,7 +80,7 @@ ngOnInit(): void {
     },
     error: err => this._error= err,
   })
-
+  
 }
 
  toggleImage(): void{

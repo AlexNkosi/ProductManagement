@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class LoginService {
 
   loggedIn:boolean = false; 
-
+  logInStatus:string = "Log In";
 
   
   public get isLoggedIn() : boolean {
@@ -16,6 +16,12 @@ export class LoginService {
   
   public set setLoggedInStatus(v : boolean) {
     this.loggedIn = v;
+    this.logInStatus = "Log out";
+  }
+  
+  
+  public get getStatusLogIn() : string {
+    return this.logInStatus; 
   }
   
   

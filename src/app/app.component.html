@@ -11,10 +11,10 @@
 
       <a href="#"
          class="space-link class-links glyphicon glyphicon-log-in"
-         [routerLink]="['/login']">Log in</a>
+         [routerLink]="['/login']"  (click)="checkStatusIsloggedIn()">{{linkName}}</a>
       <a href="#"
          class="space-link class-links"
-         [routerLink]="['/productlist']">Shop</a>
+         [routerLink]="['/productlist']" (click)="checkStatusIsloggedIn()">Shop</a>
       <a href="#"
          class="space-link class-links"
          [routerLink]="['/about']">About</a>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {LoginService} from '../shared/login.service';
 @Component({
   selector: 'pm-login',
   templateUrl: './login.component.html',
@@ -8,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent   {
 
-  constructor(private router:Router){
+  constructor(private router:Router, private login: LoginService){
 
   }
 
@@ -28,6 +29,7 @@ export class LoginComponent   {
   showShopingList():void {
     if(this.email.value !=="" && this.password.value !==""){
       this.router.navigate(['/productlist']);
+      this.login.setLoggedInStatus = true;
     }
     
   }

@@ -2,6 +2,15 @@ import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {IProduct} from '../../product-list/product.interface';
 
+
+import {
+  MatSnackBar, MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
+
+
+
+
 @Component({
   selector: 'pm-product-details',
   templateUrl: './product-details.component.html',
@@ -16,12 +25,18 @@ export class ProductDetailsComponent implements OnInit  {
     @Inject(MAT_DIALOG_DATA) public data: IProduct) { 
       
     }
-
+    
+  
 
     ngOnInit(): void {
       
       this.products = this.data;
       console.log(this.products)
     }
+
+    showSnakeBar():void {
+      
+    }
+  
 
 }

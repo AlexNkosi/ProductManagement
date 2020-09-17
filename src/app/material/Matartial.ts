@@ -16,9 +16,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
-
-
-
 const MaterialsComponets = [
   MatButtonModule,
   MatIconModule,
@@ -26,7 +23,7 @@ const MaterialsComponets = [
   MatTableModule,MatInputModule,MatCardModule,
   MatSlideToggleModule,
   MatTabsModule,MatDialogModule,
-  MatBadgeModule,MatFormFieldModule
+  MatBadgeModule,MatFormFieldModule,
 ];
 
 

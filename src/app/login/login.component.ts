@@ -14,6 +14,7 @@ export class LoginComponent   {
 
   email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
+  password = new FormControl();
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'You must enter a value';
@@ -22,8 +23,13 @@ export class LoginComponent   {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
+
+
   showShopingList():void {
-    this.router.navigate(['/productlist']);
+    if(this.email.value !=="" && this.password.value !==""){
+      this.router.navigate(['/productlist']);
+    }
+    
   }
 
 }

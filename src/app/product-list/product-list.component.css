@@ -71,6 +71,6 @@ table {
     transition: ease-in;
 }
 
-td:last-child{
-    margin-left: 3em;
+th:last-child{
+    text-align: left;
 }
